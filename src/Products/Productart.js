@@ -15,6 +15,7 @@ const Productart = ({ product }) => {
       for (let i = 0; i < exestingProduct.length; i++) {
         if (exestingProduct[i].id === id) {
           found = true;
+          alert("product already added");
         }
       }
       if (found === false) {
@@ -22,8 +23,6 @@ const Productart = ({ product }) => {
         const productArray = [...exestingProduct, product];
         localStorage.setItem("products", JSON.stringify(productArray));
         alert("successfually product added");
-      } else {
-        alert("product already added");
       }
     }
 
