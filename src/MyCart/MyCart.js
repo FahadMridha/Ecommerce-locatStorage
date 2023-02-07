@@ -5,41 +5,18 @@ const MyCart = () => {
   const [products, setProducts] = useState([]);
   const [refetch, setRefetch] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
-  // useEffect(() => {
-  //   const exestingProduct = JSON.parse(localStorage.getItem("products"));
-  //   setProducts(exestingProduct);
-  //   if (exestingProduct != null) {
-  //     let sum = 0;
-  //     for (let i = 0; i < exestingProduct.length; i++) {
-  //       sum = sum + exestingProduct[i].price * exestingProduct[i].quantaty;
-  //     }
-  //     setTotalPrice(sum);
-  //   }
-  // }, [refetch]);
   useEffect(() => {
     const exestingProduct = JSON.parse(localStorage.getItem("products"));
     setProducts(exestingProduct);
-    if (exestingProduct) {
+    if (exestingProduct != null) {
       let sum = 0;
       for (let i = 0; i < exestingProduct.length; i++) {
         sum = sum + exestingProduct[i].price * exestingProduct[i].quantaty;
-        setTotalPrice(sum);
       }
+      setTotalPrice(sum);
     }
   }, [refetch]);
   const handlerQuantatyDecrise = (id) => {
-    // let newArry = [];
-    // for (let i = 0; i < products.length; i++) {
-    //   // console.log(products[i]);
-    //   if (products[i].id === id && products[i].quantaty > 1) {
-    //     const newData = { ...products[i], quantaty: products[i].quantaty - 1 };
-    //     newArry.push(newData);
-    //   } else {
-    //     newArry.push(products[i]);
-    //   }
-    // }
-    // localStorage.setItem("products", JSON.stringify(newArry));
-    // setRefetch(!refetch);
     let newArry = [];
     for (let i = 0; i < products.length; i++) {
       if (products[i].id === id && products[i].quantaty > 1) {

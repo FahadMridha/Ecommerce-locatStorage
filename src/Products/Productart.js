@@ -5,27 +5,6 @@ const Productart = ({ product }) => {
   const { category, id, description, image, title, price } = product;
 
   const handlerAddToCart = (productValue) => {
-    // const exestingProduct = JSON.parse(localStorage.getItem("products"));
-    // if (exestingProduct == null) {
-    //   const product = { ...productValue, quantaty: 1 };
-    //   const productArray = [product];
-    //   localStorage.setItem("products", JSON.stringify(productArray));
-    // } else {
-    //   let found = false;
-    //   for (let i = 0; i < exestingProduct.length; i++) {
-    //     if (exestingProduct[i].id === id) {
-    //       found = true;
-    //     }
-    //   }
-    //   if (found === false) {
-    //     const product = { ...productValue, quantaty: 1 };
-    //     const productArray = [...exestingProduct, product];
-    //     localStorage.setItem("products", JSON.stringify(productArray));
-    //     alert("successfually product added");
-    //   } else {
-    //     alert("product already added");
-    //   }
-    // }
     const exestingProduct = JSON.parse(localStorage.getItem("products"));
     if (exestingProduct == null) {
       const product = { ...productValue, quantaty: 1 };
@@ -42,9 +21,9 @@ const Productart = ({ product }) => {
         const product = { ...productValue, quantaty: 1 };
         const productArray = [...exestingProduct, product];
         localStorage.setItem("products", JSON.stringify(productArray));
-        alert("added");
+        alert("successfually product added");
       } else {
-        alert("already have");
+        alert("product already added");
       }
     }
 
@@ -58,7 +37,7 @@ const Productart = ({ product }) => {
         </figure>
         <div className="card-body">
           <h2 className="card-title">{title}</h2>
-          <p>{description.split(0, 100)} ..</p>
+          <p>{description.split(0, 50)} ..</p>
           <p className="font-bold"> price: {price} $</p>
           <p>{category}</p>
           <div className="card-actions justify-end">
