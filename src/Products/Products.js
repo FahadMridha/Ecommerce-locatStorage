@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Spinner from "../spinner/Spinner";
 import Productart from "./Productart";
 
 const Products = () => {
@@ -13,7 +14,7 @@ const Products = () => {
       });
   }, []);
   if (loading) {
-    return <div className="text-center">Loadding..............</div>;
+    return <Spinner />;
   }
   console.log(products);
   return (

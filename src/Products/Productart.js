@@ -1,5 +1,4 @@
 import React from "react";
-import { json } from "react-router-dom";
 
 const Productart = ({ product }) => {
   const { category, id, description, image, title, price } = product;
