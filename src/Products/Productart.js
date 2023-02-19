@@ -29,6 +29,14 @@ const Productart = ({ product }) => {
   };
   return (
     <div>
+      <h3>All products ae heare</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ullam
+        ut ipsa eveniet fugit, quae fuga eos perspiciatis quam amet consequuntur
+        asperiores nam, aliquam dolorum non. Cumque ex quas, eum, amet culpa
+        debitis hic dolorem aliquam tempora dolore aliquid exercitationem esse
+        atque sint suscipit, labore facere! Tenetur vero placeat nihil.
+      </p>
       <div className="card card-compact w-96 bg-base-100 shadow-xl">
         <figure>
           <img className="object-cover h-64" src={image} alt="product" />
