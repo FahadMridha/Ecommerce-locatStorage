@@ -59,6 +59,14 @@ const MyCart = () => {
     <div>
       <Navbar />
       <div className="overflow-x-auto w-full">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+          quas dolorem debitis doloremque in temporibus nihil ex eius illum
+          dignissimos. Laboriosam repellat iure atque rem distinctio?
+          Necessitatibus sint perspiciatis quae, placeat, ullam atque tenetur
+          ducimus quaerat hic temporibus totam assumenda cupiditate corrupti
+          culpa, unde repellat deleniti ut eos iusto reiciendis.
+        </p>
         <table className="table w-full">
           <thead>
             <tr>
